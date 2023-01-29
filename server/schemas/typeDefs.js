@@ -1,16 +1,20 @@
 const { gql } = require('apollo-server-express');
 
+// There are some examples that use email: String! under Mutation/login instead of username,  if we are having issues with the login maybe we can look at that
+
 const typeDefs = gql`
 type User {
     _id: ID
     username: String
+    email: String
     password: String
-    todo: [Todo]!
+    todo: [Todo]
   }
 
   type Todo {
     _id: ID
-    todoText: String!
+    todoText: String
+    createdAt: String
   }
 
   type Auth {
@@ -26,9 +30,9 @@ type User {
   }
 
   type Mutation {
-    addUser(username: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     login(username: String!, password: String!): Auth
-    addTodo(todoText: String!, /* ADD id or some sort pf connection to user*/): Todo
+    addTodo(todoText: String!, todoAuthor: String!): Todo
     removeTodo(todoId: ID!): Todo
   }
 `;
