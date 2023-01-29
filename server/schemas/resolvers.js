@@ -12,7 +12,7 @@ const resolvers = {
         },
         todos: async (parent, { username }) => {
             const params = username ? { username } : {};
-            return Todo.find(params).sort({ /*TODO: How are we going to order the todos?*/ })
+            return Todo.find(params).sort({ createdAt: -1 })
         },
         todo: async (parent, { todoId }) => {
             return Todo.findOne({ _id: todoId });
@@ -46,7 +46,7 @@ const resolvers = {
             const todo = await Todo.create({ todoText, todoAuthor });
       
             await User.findOneAndUpdate(
-              { username: /*TODO: */ },
+              { username: todoAuthor },
               { $addToSet: { todos: todo._id } }
             );
       
