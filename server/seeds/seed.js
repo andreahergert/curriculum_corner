@@ -1,7 +1,7 @@
 const db = require("../config/connection");
 const { User, Todo } = require("../models");
 const userData = require("./userData.json");
-const todoSeeds = require("./todoSeeds.json");
+const todoData = require("./todoData.json");
 
 db.once("open", async () => {
   try {
@@ -10,8 +10,8 @@ db.once("open", async () => {
 
     await User.create(userData);
 
-    for (let i = 0; i < todoSeeds.length; i++) {
-      const { _id, todoAuthor } = await Todo.create(todoSeeds[i]);
+    for (let i = 0; i < todoData.length; i++) {
+      const { _id, todoAuthor } = await Todo.create(todoData[i]);
       const user = await User.findOneAndUpdate(
         { username: todoAuthor },
         {
