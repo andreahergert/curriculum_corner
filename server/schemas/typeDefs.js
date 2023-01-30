@@ -26,7 +26,6 @@ type User {
     users: [User]
     user(username: String!): User
     todo(username: String): [Todo]
-    todo(todoId: ID!): Todo
   }
 
   type Mutation {
