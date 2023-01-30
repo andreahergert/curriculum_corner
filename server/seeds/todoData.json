@@ -1,18 +1,18 @@
 [
     {
-        "todo": "Finish 2/3 Algorithms today",
+        "todoText": "Finish 2/3 Algorithms today",
         "todoAuthor": "testUser1"
     },
     {
-        "todo": "Read React Documentation",
+        "todoText": "Read React Documentation",
         "todoAuthor": "testUser2"
     },
     {
-        "todo": "Re-review Module 6",
+        "todoText": "Re-review Module 6",
         "todoAuthor": "testUser3"
     },
     {
-        "todo": "Redo Homework 14-MVC",
+        "todoText": "Redo Homework 14-MVC",
         "todoAuthor": "testUser1"
     }
 ]
