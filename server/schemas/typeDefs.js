@@ -8,12 +8,13 @@ type User {
     username: String
     email: String
     password: String
-    todo: [Todo]
+    todos: [Todo]!
   }
 
   type Todo {
     _id: ID
     todoText: String
+    todoAuthor: String
     createdAt: String
   }
 
@@ -25,7 +26,8 @@ type User {
   type Query {
     users: [User]
     user(username: String!): User
-    todo(username: String): [Todo]
+    todos(username: String): [Todo]
+    todo(todoId: ID!): Todo
   }
 
   type Mutation {
