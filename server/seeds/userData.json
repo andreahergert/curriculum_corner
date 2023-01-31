@@ -1,17 +1,17 @@
 [
-    {
-       "username": "testUser1",
-       "email": "testUser1@testing.com",
-       "password": "password1"
-    },
-    {
-        "username": "testUser2",
-        "email": "testUser2@testing.com",
-        "password": "password2"
-     },
-     {
-        "username": "testUser3",
-        "email": "testUser3@testing.com",
-        "password": "password3" 
-     }
+   {
+     "username": "testUser1",
+     "email": "testUser1@testing.com",
+     "password": "password1"
+   },
+   {
+     "username": "testUser2",
+     "email": "testUser2@testing.com",
+     "password": "password2"
+   },
+   {
+     "username": "testUser3",
+     "email": "testUser3@testing.com",
+     "password": "password3" 
+   }
  ]

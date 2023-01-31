@@ -1,4 +1,4 @@
-function addDateSuffix(date) {
+const addDateSuffix = (date) => {
   let dateStr = date.toString();
 
   // get last char of date string
@@ -15,7 +15,7 @@ function addDateSuffix(date) {
   }
 
   return dateStr;
-}
+};
 
 // function to format a timestamp, accepts the timestamp and an `options` object as parameters
 module.exports = (

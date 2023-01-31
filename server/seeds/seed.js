@@ -1,17 +1,17 @@
-const db = require("../config/connection");
-const { User, Todo } = require("../models");
-const userData = require("./userData.json");
-const todoData = require("./todoData.json");
+const db = require('../config/connection');
+const { User, Todo } = require('../models');
+const userSeeds = require('./userData.json');
+const todoSeeds = require('./todoData.json');
 
-db.once("open", async () => {
+db.once('open', async () => {
   try {
     await Todo.deleteMany({});
     await User.deleteMany({});
 
-    await User.create(userData);
+    await User.create(userSeeds);
 
-    for (let i = 0; i < todoData.length; i++) {
-      const { _id, todoAuthor } = await Todo.create(todoData[i]);
+    for (let i = 0; i < todoSeeds.length; i++) {
+      const { _id, todoAuthor } = await Todo.create(todoSeeds[i]);
       const user = await User.findOneAndUpdate(
         { username: todoAuthor },
         {
@@ -26,6 +26,6 @@ db.once("open", async () => {
     process.exit(1);
   }
 
-  console.log("all done!");
+  console.log('all done!');
   process.exit(0);
 });
