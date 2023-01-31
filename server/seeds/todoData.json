@@ -1,18 +1,19 @@
 [
     {
-        "todoText": "Finish 2/3 Algorithms today",
-        "todoAuthor": "testUser1"
-    },
-    {
-        "todoText": "Read React Documentation",
-        "todoAuthor": "testUser2"
-    },
-    {
-        "todoText": "Re-review Module 6",
-        "todoAuthor": "testUser3"
-    },
-    {
-        "todoText": "Redo Homework 14-MVC",
-        "todoAuthor": "testUser1"
-    }
-]
+      "todoText": "Finish 2/3 Algorithms today",
+      "todoAuthor": "testUser1"
+  },
+  {
+      "todoText": "Read React Documentation",
+      "todoAuthor": "testUser2"
+  },
+  {
+      "todoText": "Re-review Module 6",
+      "todoAuthor": "testUser3"
+  },
+  {
+      "todoText": "Redo Homework 14-MVC",
+      "todoAuthor": "testUser1"
+  }
+  ]
+  
