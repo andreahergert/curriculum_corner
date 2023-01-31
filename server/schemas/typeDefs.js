@@ -16,6 +16,7 @@ type User {
     todoText: String
     todoAuthor: String
     createdAt: String
+    completed: Boolean
   }
 
   type Auth {
