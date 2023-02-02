@@ -15,7 +15,7 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.1",
-    "tailwindcss": "^1.9.6"
+    "jwt-decode": "^3.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
