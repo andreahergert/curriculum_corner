@@ -1,6 +1,8 @@
+@config "./tailwindcss-config.js";
+
 @tailwind base;
 @tailwind components;
-@tailwigit  utilities;
+@tailwind  utilities;
 
 body {
   margin: 0;
