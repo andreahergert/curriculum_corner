@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
 
+// we will want to add this in our final product before deployment on Heroku. This is the part where we add variables under settings in our specific Heroku page. const secret = process.env.JWT_SECRET;
+
 const secret = 'mysecretssshhhhhhh';
 const expiration = '2h';
 
