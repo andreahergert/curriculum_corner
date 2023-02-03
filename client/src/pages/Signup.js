@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-//import Tailwind
 import Auth from '../utils/auth';
 
 const Signup = () => {
@@ -39,7 +38,6 @@ const Signup = () => {
 
     return (
 
-        //UPDATE TO TAILWIND
 <main>
             {data ? (
               <p>
