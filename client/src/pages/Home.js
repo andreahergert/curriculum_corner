@@ -7,10 +7,6 @@ import TodoForm from '../components/TodoForm';
 
 import { QUERY_TODOS } from '../utils/queries';
 
-const todoForm = () => {
-  const []
-}
-
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_TODOS);
@@ -19,9 +15,7 @@ const Home = () => {
   return (
     <main>
       <div className="">
-        <div
-          className=""
-        >
+        <div className="">
           <TodoForm />
         </div>
         <div className="col-12 col-md-8 mb-3">
@@ -35,10 +29,6 @@ const Home = () => {
         </div>
       </div>
     </main>
-    <div>
-      <h3>Todo's</h3>
-
-    </div>
   );
 };
 
