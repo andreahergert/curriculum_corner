@@ -27,7 +27,7 @@ const Navbar = () => {
         <Link to='/Login'>
         Login
         </Link>
-        <Link to='/Logout'>
+        <Link to='/Signup'>
         Signup
         </Link>
         </>
