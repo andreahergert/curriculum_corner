@@ -24,8 +24,8 @@ mutation addUser($username: String!, $email: String!, $password: String!) {
   }`;
 
   export const ADD_TODO = gql`
-  mutation addTodo($todoText: String!) {
-    addTodo(todoText: $todoText) {
+  mutation addTodo($todoAuthor: String!, $todoText: String!) {
+    addTodo(todoAuthor: $todoAuthor, todoText: $todoText) {
       _id
       todoText
       todoAuthor

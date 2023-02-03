@@ -42,7 +42,7 @@ const resolvers = {
 
       return { token, user };
     },
-    addThought: async (parent, { todoText, todoAuthor }) => {
+    addTodo: async (parent, { todoText, todoAuthor }) => {
       const todo = await Todo.create({ todoText, todoAuthor });
 
       await User.findOneAndUpdate(
@@ -52,7 +52,7 @@ const resolvers = {
 
       return todo;
     },
-    removeThought: async (parent, { todoId }) => {
+    removeTodo: async (parent, { todoId }) => {
       return Todo.findOneAndDelete({ _id: todoId });
     },
   },

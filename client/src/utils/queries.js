@@ -16,9 +16,9 @@ query user($username: String!) {
 `;
 
 export const QUERY_TODOS = gql`
-query getTodos {
-    todos {
-      _id
+query allTodos($username: String!) {
+    todos(username: $username){
+       _id
       todoText
       todoAuthor
       createdAt
