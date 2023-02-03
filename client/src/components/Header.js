@@ -24,10 +24,10 @@ const Navbar = () => {
         </>
         ) : (
           <>
-        <Link>
+        <Link to='/Login'>
         Login
         </Link>
-        <Link>
+        <Link to='/Logout'>
         Signup
         </Link>
         </>
