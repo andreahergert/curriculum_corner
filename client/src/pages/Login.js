@@ -39,8 +39,7 @@ const Login = (props) => {
             password: '',
         });
     };
-
-    //CHANGE TO TAILWIND
+    
     return (
         <main>
               {data ? (
