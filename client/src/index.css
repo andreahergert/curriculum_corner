@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Rubik','Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ccTitle {
+  font-family: 'Rubik Mono One';
+}
+
+.btn-btnBlue {
+  background-color: #51A8B1;
+  color: white;
+padding: 1rem 1.5rem;
+}
+
+
+.btn-btnGreen {
+  background-color: #A8CF45;
+  color: white;
+padding: 1rem 1.5rem;
+}
+
+h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+   font-size: 2em;
+   margin: 0.67em 0;
+   color: #A8CF45;
+  }
+  

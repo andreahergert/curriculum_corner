@@ -10,17 +10,18 @@ import { QUERY_TODOS } from '../utils/queries';
 
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_TODOS,  {variables: { username: Auth.getProfile().data.username }});
+  const { loading, data } = useQuery(QUERY_TODOS,
+    {variables: { username: Auth.getProfile().data.username }});
   //TODO: 
   const todos = data?.todos || [];
 
   return (
     <main>
-      <div className="">
-        <div className="">
+      <div className="flex-row justify-center">
+        <div className="col-12 col-md mb-3 p-3">
           <TodoForm />
         </div>
-        <div className="">
+        <div className="col-12 col-md-10 mb-3 p-3">
           {loading ? (
             <div>Loading...</div>
           ) : (

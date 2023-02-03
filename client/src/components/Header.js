@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Auth from '../utils/auth';
 
 const Navbar = () => {
@@ -13,7 +12,7 @@ const Navbar = () => {
     <header>
       <div>
         <Link to="/">
-          <h1>Curriculum Corner</h1>
+          <h1 className='ccTitle'>Curriculum Corner</h1>
         </Link>
       </div>
       <div>
