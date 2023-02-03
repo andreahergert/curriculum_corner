@@ -10,6 +10,7 @@ import { QUERY_TODOS } from '../utils/queries';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_TODOS);
+  //TODO: 
   const todos = data?.todos || [];
 
   return (
