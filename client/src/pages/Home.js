@@ -10,10 +10,15 @@ import { QUERY_TODOS } from '../utils/queries';
 
 
 const Home = () => {
+  console.log("Hello")
   const { loading, data } = useQuery(QUERY_TODOS,
     {variables: { username: Auth.getProfile().data.username }});
+    console.log("Goodbye")
   //TODO: 
   const todos = data?.todos || [];
+
+console.log("todos", todos)
+console.log("loading", loading)
 
   return (
     <main>
