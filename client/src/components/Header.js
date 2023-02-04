@@ -1,4 +1,5 @@
 import React from 'react';
+import Curriculum from '../assets/Curriculum.svg';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 
@@ -13,7 +14,7 @@ const Navbar = () => {
     <header className="bg-brand p-3">
       <div>
         <Link style={{textDecoration: 'none'}} to="/">
-          <h1 className='ccTitle'>Curriculum Corner</h1>
+        <center><img className='img-fluid mt-3' src={Curriculum} alt='logo' width='25%'/></center>
         </Link>
       </div>
       
@@ -26,14 +27,14 @@ const Navbar = () => {
           </>
         ) : (
           <>
-            <div className='flex-row-reverse'>
+            <div><center>
               <Link className="btn btnBlue m-2" to='/Login'>
                 Login
               </Link>
               <Link className="btn btnBlue m-2" to='/Signup'>
                 Signup
               </Link>
-            </div>
+              </center></div>
           </>
         )}
       
