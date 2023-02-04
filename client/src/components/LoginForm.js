@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
+
 import Auth from '../utils/auth';
 
 const Login = (props) => {
@@ -41,10 +42,9 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    <main className="flex-row justify-center">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+          <h4 className="card-header bg-dark text-light p-2">LOGIN</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -70,7 +70,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block .btnGreen"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
@@ -86,7 +86,6 @@ const Login = (props) => {
             )}
           </div>
         </div>
-      </div>
     </main>
   );
 };

@@ -5,87 +5,92 @@ import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const Signup = () => {
-    const [formState, setFormState] = useState({
-        username: '',
-        email: '',
-        password: '',
+  const [formState, setFormState] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
+  const [addUser, { error, data }] = useMutation(ADD_USER);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
     });
-    const [addUser, { error, data }] = useMutation(ADD_USER);
+  };
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
 
-        setFormState({
-            ...formState,
-            [name]: value,
-        });
-    };
+    try {
+      const { data } = await addUser({
+        variable: { ...formState },
+      });
 
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
-        console.log(formState);
+      Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
-        try {
-            const { data } = await addUser({
-                variable: { ...formState },
-            });
+  return (
 
-            Auth.login(data.addUser.token);
-        } catch (e) {
-            console.error(e);
-        }
-    };
+    <main className="flex-row justify-center">
+      <div className="card m-2">
+        <h4 className="card-header text-light p-2">SIGNUP</h4>
+        <div className="card-body">
+          {data ? (
+            <p>
+              Success! You may now head{' '}
+              <Link to="/">back to the homepage.</Link>
+            </p>
+          ) : (
+            <form onSubmit={handleFormSubmit}>
+              <input
+                className="form-input"
+                placeholder="Your username"
+                name="username"
+                type="text"
+                value={formState.username}
+                onChange={handleChange}
+              />
+              <input
+                className="form-input"
+                placeholder="Your email"
+                name="email"
+                type="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+              <input
+                className="form-input"
+                placeholder="******"
+                name="password"
+                type="password"
+                value={formState.password}
+                onChange={handleChange}
+              />
+              <button className='btn btnBlue'
+                style={{ cursor: 'pointer' }}
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          )}
 
-    return (
-
-<main>
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your username"
-                  name="username"
-                  type="text"
-                  value={formState.username}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
-
-            {error && (
-              <div>
-                {error.message}
-              </div>
-            )}
+          {error && (
+            <div className="my-3 p-3 bg-danger text-white">
+              {error.message}
+            </div>
+          )}
+        </div>
+      </div>
     </main>
-    )
+  )
 };
 
 export default Signup;

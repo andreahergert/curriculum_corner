@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 
+
 const Navbar = () => {
   const logout = (event) => {
     event.preventDefault();
@@ -9,29 +10,33 @@ const Navbar = () => {
   };
 
   return (
-    <header>
+    <header className="bg-brand p-3">
       <div>
-        <Link to="/">
+        <Link style={{textDecoration: 'none'}} to="/">
           <h1 className='ccTitle'>Curriculum Corner</h1>
         </Link>
       </div>
-      <div>
+      
+  
+      
         {Auth.loggedIn() ? (
           <>
-        <span>Welcome back, {Auth.getProfile().data.username}!</span>
-        <button onClick={logout}>Logout</button>
-        </>
+            <span>Welcome back, {Auth.getProfile().data.username}!</span>
+            <button className="btn btnBlue m-3" onClick={logout}>Logout</button>
+          </>
         ) : (
           <>
-        <Link to='/Login'>
-        Login
-        </Link>
-        <Link to='/Signup'>
-        Signup
-        </Link>
-        </>
+            <div className='flex-row-reverse'>
+              <Link className="btn btnBlue m-2" to='/Login'>
+                Login
+              </Link>
+              <Link className="btn btnBlue m-2" to='/Signup'>
+                Signup
+              </Link>
+            </div>
+          </>
         )}
-      </div>
+      
     </header>
   );
 };
