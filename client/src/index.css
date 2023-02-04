@@ -9,14 +9,13 @@ body {
 .btnBlue {
   background-color: #51A8B1;
   color: white;
-  padding: 1rem 1.5rem;
+  
   font-family: 'Rubik';
 }
 
 .btnBlue:hover {
   background-color: #A8CF45;
   color: white;
-  padding: 1rem 1.5rem;
 }
 
 
@@ -29,7 +28,6 @@ body {
 .btnGreen:hover {
   background-color: #51A8B1;
   color: white;
-padding: 1rem 1.5rem;
 }
 
 h1 {
