@@ -5,9 +5,10 @@ import {
   ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { setContext } from '@apollo/client/link/context'
+import { BrowserRouter as Router, Routes, Route ,Navigate } from 'react-router-dom';
 
+import Auth from './utils/auth';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -39,6 +40,12 @@ const client = new ApolloClient({
 });
 
 function App() {
+  console.log(window.location.pathname)
+
+  if (!Auth.loggedIn() && window.location.pathname === "/") {  
+    return window.location = "/login"
+  // return <Navigate to='/Login' />
+  }
   return (
     <ApolloProvider client={client}>
       <Router>
