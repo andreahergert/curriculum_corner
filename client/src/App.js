@@ -6,7 +6,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context'
-import { BrowserRouter as Router, Routes, Route ,Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Auth from './utils/auth';
 import Home from './pages/Home';
@@ -40,11 +40,9 @@ const client = new ApolloClient({
 });
 
 function App() {
-  console.log(window.location.pathname)
-
+  // will redirect to /login page if not logged in
   if (!Auth.loggedIn() && window.location.pathname === "/") {  
     return window.location = "/login"
-  // return <Navigate to='/Login' />
   }
   return (
     <ApolloProvider client={client}>
