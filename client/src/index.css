@@ -40,6 +40,25 @@ h1 {
   h2 {
     font-family: 'Rubik';
   }
+
+  .welcome {
+font-size: 25px;
+color: #A8CF45;
+font-family: 'Rubik';
+font-weight: heavy;
+  }
+
+  .logOutBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    
+  }
+
+  .areaText {
+    width: 75%;
+    height: 50%;
+  }
   
   .bg-brand {
     background-color: #001719;

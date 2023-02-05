@@ -75,15 +75,15 @@ const TodoForm = () => {
               <textarea
                 name="todoText"
                 value={todoText}
-                className=""
-                style={{ lineHeight: '1.5', resize: 'vertical', color: 'black' }}
+                className="areaText"
+                style={{ lineHeight: '5.5', resize: 'vertical', color: 'black' }}
                 onChange={handleChange}
               ></textarea>
             </div>
 
             <div className="">
-              <button className="" type="submit">
-                Add todo
+              <button className="btn btnBlue mb-2" size="sm"  type="submit">
+                Add Todo
               </button>
             </div>
             {error && (

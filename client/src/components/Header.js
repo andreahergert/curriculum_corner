@@ -22,8 +22,8 @@ const Navbar = () => {
       
         {Auth.loggedIn() ? (
           <>
-            <span>Welcome back, {Auth.getProfile().data.username}!</span>
-            <button className="btn btnBlue m-3" onClick={logout}>Logout</button>
+            <span className="welcome">Welcome back, {Auth.getProfile().data.username}!</span>
+            <button className="btn btnBlue m-3 logOutBtn"  onClick={logout}>Logout</button>
           </>
         ) : (
           <>
