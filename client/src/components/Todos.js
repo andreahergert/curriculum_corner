@@ -11,8 +11,9 @@ const Todos = ({ todos, title }) => {
       <h3>{title}</h3>
       {todos &&
         todos.map((todo) => (
-          <div key={todo._id} className="todoStyle">
-            <h4 className="todoStyle">
+          <div key={todo._id}>
+            <div className='todoLive'>
+            <h4>
               {todo.todoAuthor} <br />
               <span style={{ fontSize: '1rem' }}>
                 had this todo on {todo.createdAt}
@@ -21,11 +22,13 @@ const Todos = ({ todos, title }) => {
             <div className="todoStyle">
               <p>{todo.todoText}</p>
             </div>
+            
             <div className="">
-            <button value={todo.completed}>{/*I dont know if the value is correct or what exactly we would need to put for the btn*/}</button>
+            <button classname="" value={todo.completed}>{/*I dont know if the value is correct or what exactly we would need to put for the btn*/}</button>
+            </div>
             </div>
             <Link
-              className=""
+              className="h1"
               to={`/todos/${todo._id}`}                
             >
             </Link>

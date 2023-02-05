@@ -41,11 +41,25 @@ h1 {
     font-family: 'Rubik';
   }
 
+  .todoLive {
+    color: white;
+    font-family: 'Rubik';
+    border-style: solid;
+    border-radius: 1rem;
+    border-color: #51A8B1;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .welcomeMessage {
+    text-align: center;
+  }
+
   .welcome {
-font-size: 25px;
-color: #A8CF45;
-font-family: 'Rubik';
-font-weight: heavy;
+  font-size: 25px;
+  color: #A8CF45;
+  font-family: 'Rubik';
+  font-weight: heavy;
   }
 
   .logOutBtn {
@@ -55,9 +69,13 @@ font-weight: heavy;
     
   }
 
+  .todoForm {
+    align-items: center;
+  }
   .areaText {
     width: 75%;
     height: 50%;
+    
   }
   
   .bg-brand {
@@ -78,9 +96,10 @@ font-weight: heavy;
     color: white;
     font-family: 'Rubik';
     margin: 10px;
-    justify-content: center;
-    position: absolute;
-    bottom: 0px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: center;
     
   }
 

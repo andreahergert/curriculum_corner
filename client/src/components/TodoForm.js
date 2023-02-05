@@ -62,7 +62,7 @@ const TodoForm = () => {
   return (
     <div>
       <h3>Add a Todo:</h3>
-
+    
       {Auth.loggedIn() ? (
         <>
           <p
@@ -83,6 +83,7 @@ const TodoForm = () => {
                 style={{ lineHeight: '5.5', resize: 'vertical', color: 'black' }}
                 onChange={handleChange}
               ></textarea>
+            
             </div>
 
             <div className="">
@@ -96,12 +97,14 @@ const TodoForm = () => {
               </div>
             )}
           </form>
+          
         </>
       ) : (
         <p>
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
+      
     </div>
   );
 };
