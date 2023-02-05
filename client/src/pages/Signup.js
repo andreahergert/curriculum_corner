@@ -27,7 +27,7 @@ const Signup = () => {
 
     try {
       const { data } = await addUser({
-        variable: { ...formState },
+        variables: { ...formState },
       });
 
       Auth.login(data.addUser.token);
@@ -54,7 +54,7 @@ const Signup = () => {
                 placeholder="Your username"
                 name="username"
                 type="text"
-                value={formState.username}
+                value={formState.name}
                 onChange={handleChange}
               />
               <input
