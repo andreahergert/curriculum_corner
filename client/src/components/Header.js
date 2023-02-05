@@ -22,7 +22,9 @@ const Navbar = () => {
       
         {Auth.loggedIn() ? (
           <>
+          <div className='welcomeMessage'>
             <span className="welcome">Welcome back, {Auth.getProfile().data.username}!</span>
+          </div>
             <button className="btn btnBlue m-3 logOutBtn"  onClick={logout}>Logout</button>
           </>
         ) : (
