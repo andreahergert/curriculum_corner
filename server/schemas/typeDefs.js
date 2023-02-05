@@ -33,6 +33,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addTodo(todoText: String!, todoAuthor: String!): Todo
     removeTodo(todoId: ID!): Todo
+    updateTodo(todoId: ID!, todoText: String!, todoAuthor: String!): Todo
   }
 `;
 
