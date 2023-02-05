@@ -55,6 +55,10 @@ const TodoForm = () => {
     }
   };
 
+  const handleReload = () => {
+    window.location.reload();
+  };
+
   return (
     <div>
       <h3>Add a Todo:</h3>
@@ -82,7 +86,7 @@ const TodoForm = () => {
             </div>
 
             <div className="">
-              <button className="btn btnBlue mb-2" size="sm"  type="submit">
+              <button className="btn btnBlue mb-2" size="sm"  type="submit" onClick={handleReload}>
                 Add Todo
               </button>
             </div>
