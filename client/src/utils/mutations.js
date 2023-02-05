@@ -33,3 +33,23 @@ export const ADD_USER = gql`
       createdAt
     }
   }`;
+
+  export const UPDATE_TODO = gql`
+  mutation updateTodo($todoId: ID!, $todoText: String!, $todoAuthor: String!) {
+    updateTodo(todoId: $todoId, todoText: $todoText, todoAuthor: $todoAuthor) {
+      _id
+      todoText
+      todoAuthor
+    }
+  }
+`;
+
+export const REMOVE_TODO = gql`
+mutation removeTodo($todoId: ID!) {
+  removeTodo(todoId: $todoId) {
+    _id
+    todoText
+    todoAuthor
+  }
+}
+`;

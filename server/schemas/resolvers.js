@@ -53,6 +53,14 @@ const resolvers = {
 
       return todo;
     },
+    updateTodo: async (parent, { todoId, todoText, todoAuthor }) => {
+      const updatedTodo = await Todo.findOneAndUpdate(
+        { _id: todoId },
+        { todoText, todoAuthor },
+        { new: true }
+      );
+      return updatedTodo;
+    },
     removeTodo: async (parent, { todoId }) => {
       return Todo.findOneAndDelete({ _id: todoId });
     },
