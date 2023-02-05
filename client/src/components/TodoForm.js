@@ -62,13 +62,13 @@ const TodoForm = () => {
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''
+            className={` todoStyle${characterCount === 280 || error ? 'text-danger' : ''
               }`}
           >
             Character Count: {characterCount}/280
           </p>
           <form
-            className=""
+            className="addTodo"
             onSubmit={handleFormSubmit}
           >
             <div className="">

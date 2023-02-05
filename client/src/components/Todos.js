@@ -11,14 +11,14 @@ const Todos = ({ todos, title }) => {
       <h3>{title}</h3>
       {todos &&
         todos.map((todo) => (
-          <div key={todo._id} className="">
-            <h4 className="">
+          <div key={todo._id} className="todoStyle">
+            <h4 className="todoStyle">
               {todo.todoAuthor} <br />
               <span style={{ fontSize: '1rem' }}>
                 had this todo on {todo.createdAt}
               </span>
             </h4>
-            <div className="  ">
+            <div className="todoStyle">
               <p>{todo.todoText}</p>
             </div>
             <div className="">
