@@ -57,4 +57,34 @@ h1 {
 
   .footer {
     color: white;
+    font-family: 'Rubik';
+    margin: 10px;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    
+  }
+
+  .form-input {
+    margin: 5px;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+
+  .todoStyle {
+    color: white;
+    font-family: 'Rubik';
+  }
+
+  h3 {
+    font-family: 'Rubik Mono One';
+    color: white;
+  }
+
+  @media only screen and(min-width: 460px) {
+    .form-input{
+      width: 80%!important;
+    }
   }

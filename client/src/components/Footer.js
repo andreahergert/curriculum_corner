@@ -2,7 +2,9 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className= "footer m-3">Made with love 💕</footer>
+        
+        <footer className= "footer">Made with love 💕</footer>
+        
     );
 };
 
