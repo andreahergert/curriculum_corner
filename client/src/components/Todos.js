@@ -6,6 +6,11 @@ const Todos = ({ todos, title, handleRemoveTodo }) => {
     return <h3>Add Todo's</h3>;
   }
 
+  const handleClick = (todoId) => {
+    handleRemoveTodo(todoId);
+    window.location.reload();
+  };
+
   return (
     <div>
       <h3>{title}</h3>
@@ -26,7 +31,7 @@ const Todos = ({ todos, title, handleRemoveTodo }) => {
             <div>
             <button 
                 className="btn btnBlue"
-                onClick={() => handleRemoveTodo(todo._id)}
+                onClick={() => handleClick(todo._id)}
               >
                 Remove Todo
               </button>
