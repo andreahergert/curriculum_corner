@@ -53,10 +53,10 @@ const resolvers = {
 
       return todo;
     },
-    updateTodo: async (parent, { todoId, todoText, todoAuthor }) => {
+    markTodoAsCompleted: async (parent, { todoId }) => {
       const updatedTodo = await Todo.findOneAndUpdate(
         { _id: todoId },
-        { todoText, todoAuthor },
+        { completed: true },
         { new: true }
       );
       return updatedTodo;

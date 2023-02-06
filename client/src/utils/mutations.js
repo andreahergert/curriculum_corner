@@ -34,12 +34,13 @@ export const ADD_USER = gql`
     }
   }`;
 
-  export const UPDATE_TODO = gql`
-  mutation updateTodo($todoId: ID!, $todoText: String!, $todoAuthor: String!) {
-    updateTodo(todoId: $todoId, todoText: $todoText, todoAuthor: $todoAuthor) {
+  export const MARK_TODO_AS_COMPLETED = gql`
+  mutation markTodoAsCompleted($todoId: ID!) {
+    markTodoAsCompleted(todoId: $todoId) {
       _id
       todoText
       todoAuthor
+      completed
     }
   }
 `;

@@ -7,7 +7,7 @@ import Todos from '../components/Todos';
 import TodoForm from '../components/TodoForm';
 
 import { QUERY_TODOS } from '../utils/queries';
-import { REMOVE_TODO } from '../utils/mutations';
+import { REMOVE_TODO, MARK_TODO_AS_COMPLETED } from '../utils/mutations';
 
 
 const Home = () => {
@@ -16,9 +16,14 @@ const Home = () => {
   const todos = data?.todos || [];
 
 const [removeTodo] = useMutation(REMOVE_TODO);
+const [markTodoAsCompleted] = useMutation(MARK_TODO_AS_COMPLETED);
 
 const handleRemoveTodo = (id) => {
   removeTodo({ variables: { todoId: id } });
+};
+
+const handleMarkTodoAsCompleted = (id) => {
+  markTodoAsCompleted({ variables: { todoId: id } });
 };
 
   return (
@@ -34,6 +39,7 @@ const handleRemoveTodo = (id) => {
             <Todos
               todos={todos}
               handleRemoveTodo={handleRemoveTodo}
+              handleMarkTodoAsCompleted={handleMarkTodoAsCompleted}
             />
           )}
         </div>
