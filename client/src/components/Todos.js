@@ -16,21 +16,21 @@ const Todos = ({ todos, title, handleRemoveTodo }) => {
             <h4>
               {todo.todoAuthor} <br />
               <span style={{ fontSize: '1rem' }}>
-                had this todo on {todo.createdAt}
+                added this todo on {todo.createdAt}
               </span>
             </h4>
             <div className="todoStyle">
-              <p>{todo.todoText}</p>
+              <p>• {todo.todoText}</p>
             </div>
             
-            <div className="">
+            <div>
             <button 
-                className=""
+                className="btn btnBlue"
                 onClick={() => handleRemoveTodo(todo._id)}
               >
                 Remove Todo
               </button>
-            <button className="" value={todo.completed}>{/*I dont know if the value is correct or what exactly we would need to put for the btn*/}Completed</button>
+            <button className="btn btnGreen" value={todo.completed}>{/*I dont know if the value is correct or what exactly we would need to put for the btn*/}Completed</button>
             </div>
             </div>
             <Link
