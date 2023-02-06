@@ -13,16 +13,12 @@ import { REMOVE_TODO } from '../utils/mutations';
 const Home = () => {
   const { loading, data } = useQuery(QUERY_TODOS,
     {variables: { username: Auth.getProfile().data.username }});
-  //TODO: 
   const todos = data?.todos || [];
-
-console.log("todos", todos)
-console.log("loading", loading)
 
 const [removeTodo] = useMutation(REMOVE_TODO);
 
 const handleRemoveTodo = (id) => {
-  removeTodo({ variables: { id } });
+  removeTodo({ variables: { todoId: id } });
 };
 
   return (
