@@ -18,16 +18,39 @@ body {
   color: white;
 }
 
+.divWidth {
+  width: 80%;
+}
 
 .btnGreen {
   background-color: #A8CF45;
   color: white;
-  padding: 1rem 1.5rem;
+  margin: 1em;
 }
 
 .btnGreen:hover {
   background-color: #51A8B1;
   color: white;
+}
+
+.btnAddTudo {
+  background-color: #51A8B1;
+  color: white;
+  justify-content: reverse;
+  font-family: 'Rubik';
+  float: right;
+}
+
+.btnAddTudo:hover {
+  background-color: #A8CF45;
+  color: white;
+}
+
+.todoTitle{ 
+  color: white;
+  font-family: 'Rubik mono one';
+  font-size: 1.25em;
+  margin-left: 20%;
 }
 
 h1 {
@@ -58,7 +81,7 @@ h1 {
   .welcome {
   font-size: 25px;
   color: #A8CF45;
-  font-family: 'Rubik';
+  font-family: 'Rubik mono one';
   font-weight: heavy;
   }
 
@@ -71,11 +94,16 @@ h1 {
 
   .todoForm {
     align-items: center;
+    display: none;
   }
+
+  .formSize {
+    align-items: center;
+  }
+
   .areaText {
-    width: 75%;
+    width: 60%;
     height: 50%;
-    
   }
   
   .bg-brand {

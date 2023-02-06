@@ -61,8 +61,8 @@ const TodoForm = () => {
 
   return (
     <div>
-      <h3>Add a Todo:</h3>
-    
+      <p className='todoTitle'>Add a Todo:</p>
+
       {Auth.loggedIn() ? (
         <>
           <p
@@ -71,11 +71,13 @@ const TodoForm = () => {
           >
             Character Count: {characterCount}/280
           </p>
+
           <form
             className="addTodo"
             onSubmit={handleFormSubmit}
+
           >
-            <div className="">
+            <center>
               <textarea
                 name="todoText"
                 value={todoText}
@@ -83,28 +85,28 @@ const TodoForm = () => {
                 style={{ lineHeight: '5.5', resize: 'vertical', color: 'black' }}
                 onChange={handleChange}
               ></textarea>
-            
-            </div>
 
-            <div className="">
-              <button className="btn btnBlue mb-2" size="sm"  type="submit" onClick={handleReload}>
+            </center>
+
+            <div className='divWidth'>
+              <button className="btn btnAddTudo mb-2" size="sm" type="submit" onClick={handleReload}>
                 Add Todo
               </button>
             </div>
             {error && (
-              <div className="">
+              <div>
                 {error.message}
               </div>
             )}
           </form>
-          
+
         </>
       ) : (
         <p>
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
-      
+
     </div>
   );
 };
