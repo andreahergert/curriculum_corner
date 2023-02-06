@@ -14,6 +14,7 @@ const typeDefs = gql`
     todoText: String!
     todoAuthor: String!
     createdAt: String
+    completed: Boolean
   }
 
   type Auth {
@@ -33,7 +34,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addTodo(todoText: String!, todoAuthor: String!): Todo
     removeTodo(todoId: ID!): Todo
-    updateTodo(todoId: ID!, todoText: String!, todoAuthor: String!): Todo
+    markTodoAsCompleted(todoId: ID!): Todo
   }
 `;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Todos = ({ todos, title, handleRemoveTodo }) => {
+const Todos = ({ todos, title, handleRemoveTodo, handleMarkTodoAsCompleted }) => {
   if (!todos.length) {
     return <h3>Add Todo's</h3>;
   }
@@ -35,7 +35,7 @@ const Todos = ({ todos, title, handleRemoveTodo }) => {
               >
                 Remove Todo
               </button>
-            <button className="btn btnGreen" value={todo.completed}>{/*I dont know if the value is correct or what exactly we would need to put for the btn*/}Completed</button>
+            <button className="btn btnGreen" onClick={() => {console.log("Completed button clicked"); handleMarkTodoAsCompleted(todo._id)}}>Completed</button>
             </div>
             </div>
             <Link
