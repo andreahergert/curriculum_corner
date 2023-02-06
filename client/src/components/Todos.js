@@ -35,7 +35,13 @@ const Todos = ({ todos, title, handleRemoveTodo, handleMarkTodoAsCompleted }) =>
               >
                 Remove Todo
               </button>
-            <button className="btn btnGreen" onClick={() => {console.log("Completed button clicked"); handleMarkTodoAsCompleted(todo._id)}}>Completed</button>
+              <button
+                  className={`btn ${todo.completed ? "btnCompleted" : "btnGreen"}`}
+                  onClick={() => {
+                    handleMarkTodoAsCompleted(todo._id);
+                  }}
+                >
+                Completed</button>
             </div>
             </div>
             <Link
