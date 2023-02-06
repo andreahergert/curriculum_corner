@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useMutation } from '@apollo/client';
 import { useQuery } from '@apollo/client';
 import Auth from '../utils/auth';
 
@@ -7,6 +7,7 @@ import Todos from '../components/Todos';
 import TodoForm from '../components/TodoForm';
 
 import { QUERY_TODOS } from '../utils/queries';
+import { REMOVE_TODO } from '../utils/mutations';
 
 
 const Home = () => {
@@ -17,6 +18,12 @@ const Home = () => {
 
 console.log("todos", todos)
 console.log("loading", loading)
+
+const [removeTodo] = useMutation(REMOVE_TODO);
+
+const handleRemoveTodo = (id) => {
+  removeTodo({ variables: { id } });
+};
 
   return (
     <main>
@@ -30,6 +37,7 @@ console.log("loading", loading)
           ) : (
             <Todos
               todos={todos}
+              handleRemoveTodo={handleRemoveTodo}
             />
           )}
         </div>
