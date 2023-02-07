@@ -33,19 +33,16 @@ This is our group project for Project 3 created in the UW Coding Bootcamp. This 
 - Running npm run develop will give you access to the Apollo Server (Graph QL), MongoDB Compass,  and the localhost webpage
 
 ## Usage
-Webpage: *TODO*
+Webpage: https://pacific-anchorage-45596.herokuapp.com/
 
+Login or Signup and add your tasks.  Mark them as completed or remove them.
 
 ## Screenshots of Website
-*TODO*
 Homepage/Login
+![Screenshot](assets/img/screenshot_1.png)
 
-![Screenshot](client/assets/screenshot_1.png)
-
-*TODO*
 Dashboard
-
-![Screenshot](client/assets/screenshot_2.png)
+![Screenshot](assets/img/screenshot_2.png)
 
 ## License
 MIT License
