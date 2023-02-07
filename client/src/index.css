@@ -71,7 +71,8 @@ h1 {
     border-radius: 1rem;
     border-color: #51A8B1;
     padding: 1rem;
-    margin: 1rem;
+    margin: 2rem;
+    width: 60%;
   }
 
   .welcomeMessage {
@@ -160,8 +161,11 @@ h1 {
     color:#A8CF45
   }
 
-  @media only screen and(min-width: 460px) {
+  .centerTodos {
+    margin-left: 23%;
+  }
+  /*@media only screen and(min-width: 460px) {
     .form-input{
       width: 80%!important;
     }
-  }
+  }*/

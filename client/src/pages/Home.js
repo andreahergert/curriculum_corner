@@ -29,10 +29,10 @@ const handleMarkTodoAsCompleted = (id) => {
   return (
     <main>
       <div className="flex-row justify-center">
-        <div className="col-12 col-md mb-3 p-3">
+        <div className="col-12 col-md mb-5 p-3">
           <TodoForm />
         </div>
-        <div className="col-12 col-md-10 mb-3 p-3">
+        <div className='centerTodos'>
           {loading ? (
             <div>Loading...</div>
           ) : (
