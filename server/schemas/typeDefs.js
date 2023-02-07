@@ -8,7 +8,6 @@ const typeDefs = gql`
     password: String!
     todos: [Todo]!
   }
-
   type Todo {
     _id: ID!
     todoText: String!
@@ -16,19 +15,16 @@ const typeDefs = gql`
     createdAt: String
     completed: Boolean
   }
-
   type Auth {
     token: ID!
     user: User
   }
-
   type Query {
     users: [User]
     user(username: String!): User
     todos(username: String!): [Todo]
     todo(todoId: ID!): Todo
   }
-
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
