@@ -66,7 +66,7 @@ const TodoForm = () => {
       {Auth.loggedIn() ? (
         <>
           <p
-            className={` todoStyle${characterCount === 280 || error ? 'text-danger' : ''
+            className={` todoCount${characterCount === 280 || error ? 'text-danger' : ''
               }`}
           >
             Character Count: {characterCount}/280

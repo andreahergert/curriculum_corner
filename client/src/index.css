@@ -128,6 +128,7 @@ h1 {
     left: 0;
     bottom: 0;
     text-align: center;
+    padding-top: 25%;
     
   }
 
@@ -144,9 +145,19 @@ h1 {
     font-family: 'Rubik';
   }
 
+  .todoCount {
+    color: white;
+    font-family: 'Rubik';
+    padding-left: 20%;
+  }
+
   h3 {
     font-family: 'Rubik Mono One';
     color: white;
+  }
+
+  .characterCount {
+    color:#A8CF45
   }
 
   @media only screen and(min-width: 460px) {
