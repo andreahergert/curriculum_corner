@@ -48,7 +48,6 @@ const TodoForm = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log('handle quotes', name, value)
     if (name === 'todoText' && value.length <= 280) {
       setTodoText(value);
       setCharacterCount(value.length);
