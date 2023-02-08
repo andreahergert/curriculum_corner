@@ -22,14 +22,20 @@ body {
   width: 80%;
 }
 
-.btnGreen {
+.btnCompleted {
   background-color: #A8CF45;
   color: white;
   margin: 1em;
 }
 
-.btnGreen:hover {
+.btnGreen {
   background-color: #51A8B1;
+  color: white;
+  margin: 1em;
+}
+
+.btnGreen:hover {
+  background-color: #A8CF45;
   color: white;
 }
 

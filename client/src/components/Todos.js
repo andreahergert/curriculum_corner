@@ -7,6 +7,7 @@ const Todos = ({
   title,
   handleRemoveTodo,
   handleMarkTodoAsCompleted,
+  completedTodos,
 }) => {
   const loggedInUsername = Auth.getProfile().data.username;
   if (!todos.length) {
@@ -46,10 +47,10 @@ const Todos = ({
                   </button>
                   <button
                     className={`btn ${
-                      todo.completed ? "btnCompleted" : "btnGreen"
+                      todo.completed || completedTodos.includes(todo._id) ? "btnCompleted" : "btnGreen"
                     }`}
                     onClick={() => {
-                      handleMarkTodoAsCompleted(todo._id);
+                      handleMarkTodoAsCompleted(todo._id, !todo.completed);
                     }}
                   >
                     Completed
