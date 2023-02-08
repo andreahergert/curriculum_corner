@@ -53,7 +53,7 @@ const resolvers = {
       if (!todo) throw new AuthenticationError("Not authorized");
       return Todo.findOneAndUpdate(
         { _id: todoId },
-        { completed: true },
+        { $set: { completed: true } },
         { new: true }
       );
     },
