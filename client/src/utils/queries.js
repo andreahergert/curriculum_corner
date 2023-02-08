@@ -22,6 +22,7 @@ export const QUERY_TODOS = gql`
       todoText
       todoAuthor
       createdAt
+      completed
     }
   }
 `;
